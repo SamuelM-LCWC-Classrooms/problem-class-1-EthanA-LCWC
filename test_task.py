@@ -169,7 +169,7 @@ def test_pyramid_height_1_block():
 def test_pyramid_height_0_blocks():
     with patch('builtins.input', side_effect=['0', '7']):
         result = task.task_5()
-        expected = 2
+        expected = 3
         assert result == expected
 
 def test_pyramid_height_negative_input():
@@ -181,5 +181,5 @@ def test_pyramid_height_negative_input():
 def test_large_number_of_blocks():
     with patch('builtins.input', side_effect=['100000']):
         result = task.task_5()
-        expected = 447
+        expected = 446
         assert result == expected
