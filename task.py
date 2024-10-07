@@ -8,8 +8,8 @@ def task_1():
 
 def task_2(cost):
     tip = float(input("Please enter a tip as a percentage: "))
-    while tip == False:
-        tip = float(input("Don't be rude. Please enter a tip as a percentage: "))
+    if tip < 0:
+        tip = float(input("You can't enter a negative number. Please enter a tip as a percentage: "))
     tip = tip / 100
     tip = cost * tip
     cost = cost * 1.20
