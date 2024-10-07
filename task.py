@@ -3,7 +3,7 @@ def task_1():
     resistors = int(input("Please enter the number of resistors: "))
     total_resistance = 0
     for x in range(resistors):
-        total_resistance += int(input(f"Please enter the Ohms in resistor {x + 1}: "))
+        total_resistance += float(input(f"Please enter the Ohms in resistor {x + 1}: "))
     return total_resistance
 
 def task_2(cost):
@@ -12,9 +12,10 @@ def task_2(cost):
         tip = float(input("Don't be rude. Please enter a tip as a percentage: "))
     tip = tip / 100
     tip = cost * tip
+    cost = cost * 1.20
     cost = cost + tip
-    total_cost = cost * 1.20
-    return total_cost
+    #total_cost = cost * 1.20
+    return cost
 
 def task_3():
     result = []
