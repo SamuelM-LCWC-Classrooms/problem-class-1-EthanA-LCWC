@@ -53,13 +53,13 @@ def test_negative_tip_prompt():
 def test_large_tip():
     with patch('builtins.input', side_effect=['50']):
         result = task.task_2(200)  # Cost of meal is 200
-        expected = 290.0  # 200 + (200 * 0.20) + (50% of 200) = 200 + 40 + 100
+        expected = 340.0  # 200 + (200 * 0.20) + (50% of 200) = 200 + 40 + 100
         assert result == expected
 
 def test_tip_with_float_input():
     with patch('builtins.input', side_effect=['15.5']):
         result = task.task_2(80)  # Cost of meal is 80
-        expected = 114.4  # 80 + (80 * 0.20) + (15.5% of 80) = 80 + 16 + 12.4
+        expected = 108.4  # 80 + (80 * 0.20) + (15.5% of 80) = 80 + 16 + 12.4
         assert result == expected
 
 def test_valid_input_fizzbuzz_15():
